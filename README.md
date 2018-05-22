@@ -19,39 +19,44 @@ source ~/.bash_profile
 
 
 
-#curlのopenssl更新
-#curl : (1) Protocol https not supported or disabled in libcurl
-#https://stackoverflow.com/questions/19015282/how-do-i-enable-https-support-in-libcurl
-#  curl version:     7.54.0
-#  Host setup:       x86_64-pc-linux-gnu
-#  Install prefix:   /usr/local
-#  Compiler:         gcc
-#  SSL support:      enabled (OpenSSL)
-#  SSH support:      no      (--with-libssh2)
-#  zlib support:     enabled
-#  GSS-API support:  no      (--with-gssapi)
-#  TLS-SRP support:  no      (--enable-tls-srp)
-#  resolver:         default (--enable-ares / --enable-threaded-resolver)
-#  IPv6 support:     enabled
-#  Unix sockets support: enabled
-#  IDN support:      no      (--with-{libidn2,winidn})
-#  Build libcurl:    Shared=yes, Static=yes
-#  Built-in manual:  enabled
-#  --libcurl option: enabled (--disable-libcurl-option)
-#  Verbose errors:   enabled (--disable-verbose)
-#  SSPI support:     no      (--enable-sspi)
-#  ca cert bundle:   /etc/pki/tls/certs/ca-bundle.crt
-#  ca cert path:     no
-#  ca fallback:      no
-#  LDAP support:     no      (--enable-ldap / --with-ldap-lib / --with-lber-lib)
-#  LDAPS support:    no      (--enable-ldaps)
-#  RTSP support:     enabled
-#  RTMP support:     no      (--with-librtmp)
-#  metalink support: no      (--with-libmetalink)
-#  PSL support:      no      (libpsl not found)
-#  HTTP2 support:    disabled (--with-nghttp2)
-#  Protocols:        DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+# curlのopenssl更新
+`
+curl : (1) Protocol https not supported or disabled in libcurl
+`
+[https://stackoverflow.com/questions/19015282/how-do-i-enable-https-support-in-libcurl]
 
+`
+#curlオプション
+curl version:     7.54.0
+Host setup:       x86_64-pc-linux-gnu
+Install prefix:   /usr/local
+Compiler:         gcc
+SSL support:      enabled (OpenSSL)
+SSH support:      no      (--with-libssh2)
+zlib support:     enabled
+GSS-API support:  no      (--with-gssapi)
+TLS-SRP support:  no      (--enable-tls-srp)
+resolver:         default (--enable-ares / --enable-threaded-resolver)
+IPv6 support:     enabled
+Unix sockets support: enabled
+IDN support:      no      (--with-{libidn2,winidn})
+Build libcurl:    Shared=yes, Static=yes
+Built-in manual:  enabled
+--libcurl option: enabled (--disable-libcurl-option)
+Verbose errors:   enabled (--disable-verbose)
+SSPI support:     no      (--enable-sspi)
+ca cert bundle:   /etc/pki/tls/certs/ca-bundle.crt
+ca cert path:     no
+ca fallback:      no
+LDAP support:     no      (--enable-ldap / --with-ldap-lib / --with-lber-lib)
+LDAPS support:    no      (--enable-ldaps)
+RTSP support:     enabled
+RTMP support:     no      (--with-librtmp)
+metalink support: no      (--with-libmetalink)
+PSL support:      no      (libpsl not found)
+HTTP2 support:    disabled (--with-nghttp2)
+Protocols:        DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+`
 cd /path/to/curl # step-1
 ./configure --with-ssl # step-2
 make # step-3
