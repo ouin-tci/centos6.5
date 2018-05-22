@@ -1,4 +1,4 @@
-# centos6.5
+# vagrant でcentos6.5にGit, Apache, PostgreSQL9.3, Ruby, Ruby on Railsをインストール
 
 VagrantFileを下記フォルダーに置く
 
@@ -54,33 +54,6 @@ cat ~/.ssh/id_rsa.pub
 https://github.com/settings/keys
 ```
 
-# rbenvのインストール
-
-```
-#centOS6.5のgit は1.7系、古いもの
-#このエラーがでた時に error:  while accessing https://github.com/xxxx
-#参考URL：https://qiita.com/murai-taisuke/items/173b3cbbd697e630047d
-#yum update -y nss curl libcurl
-
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-
-#sudo suをしたときに要実行
-source ~/.bash_profile
-rbenv --version
-```
-
-# Rubyのインストール
-
-```
-rbenv install --list
-yum install -y openssl-devel readline-devel zlib-devel
-rbenv install 2.2.3
-rbenv versions
-```
-
 # PostgreSQL インストール
 
 ```
@@ -127,7 +100,6 @@ yum remove php* php-common
 
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 yum -y install --enablerepo=remi,remi-php71 php php-devel php-mbstring php-mysql php-pdo php-gd
-#s------------------------------------------------
 
 php --version
 
@@ -175,6 +147,34 @@ echo 'PATH=/usr/local/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
 
 curl https://cli-assets.heroku.com/install-standalone.sh | sh
+```
+
+
+# rbenvのインストール
+
+```
+#centOS6.5のgit は1.7系、古いもの
+#このエラーがでた時に error:  while accessing https://github.com/xxxx
+#参考URL：https://qiita.com/murai-taisuke/items/173b3cbbd697e630047d
+#yum update -y nss curl libcurl
+
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
+#sudo suをしたときに要実行
+source ~/.bash_profile
+rbenv --version
+```
+
+# Rubyのインストール
+
+```
+rbenv install --list
+yum install -y openssl-devel readline-devel zlib-devel
+rbenv install 2.2.3
+rbenv versions
 ```
 
 # Ruby on Railsインストール
