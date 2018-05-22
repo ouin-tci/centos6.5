@@ -72,14 +72,14 @@ chkconfig postgresql-9.3 on
 service postgresql-9.3 start
 service postgresql-9.3 stop
 
-#
+#IPとポートを設定する
 vi /var/lib/pgsql/9.3/data/postgresql.conf 
 listen_addresses = 'localhost'
 ↓
 listen_addresses = '*' 
-
 port = 5432
 
+#外部からアクセスできるように
 vi /var/lib/pgsql/9.3/data/pg_hba.conf 
 # IPv4 local connections:
 host    all         all         127.0.0.1/32          trust
