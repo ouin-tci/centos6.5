@@ -72,6 +72,14 @@ chkconfig postgresql-9.3 on
 service postgresql-9.3 start
 service postgresql-9.3 stop
 
+#
+vi /var/lib/pgsql/9.3/data/postgresql.conf 
+listen_addresses = 'localhost'
+↓
+listen_addresses = '*' 
+
+port = 5432
+
 #postgres パスワードを変更
 
 passwd postgres
