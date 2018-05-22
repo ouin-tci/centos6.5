@@ -59,6 +59,7 @@ https://github.com/settings/keys
 ```
 #https://yum.postgresql.org/9.3/redhat/rhel-6.5-x86_64/
 #https://weblabo.oscasierra.net/postgresql-installing-postgresql9-centos6-1/
+#pgAdmin https://www.pgadmin.org/download/
 
 yum -y localinstall https://yum.postgresql.org/9.3/redhat/rhel-6.5-x86_64/pgdg-centos93-9.3-3.noarch.rpm
 yum -y install postgresql93-server
