@@ -70,6 +70,18 @@ chkconfig postgresql-9.3 on
 #Start & Stop
 service postgresql-9.3 start
 service postgresql-9.3 stop
+
+#postgres パスワードを変更
+
+passwd postgres
+
+#postgresでDB操作　
+su - postgres
+
+#基本操作
+#http://www.marronkun.net/linux/other/database_000014.html
+psql -l
+
 ```
 
 # PHP5.6インストール
