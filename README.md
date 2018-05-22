@@ -80,6 +80,12 @@ listen_addresses = '*'
 
 port = 5432
 
+vi /var/lib/pgsql/9.3/data/pg_hba.conf 
+# IPv4 local connections:
+host    all         all         127.0.0.1/32          trust
+host    all         all         0.0.0.0/0             trust
+
+
 #postgres パスワードを変更
 
 passwd postgres
