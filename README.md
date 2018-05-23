@@ -228,3 +228,14 @@ yum install postgresql93-devel
 gem install pg -- --with-pg-config=/usr/pgsql-9.3/bin/pg_config
 
 ```
+
+# rails サーバー起動時にのえらー
+
+```
+there was an error while trying to load the gem 'uglifier'. (Bundler::GemRequireError)
+# See https://github.com/rails/execjs#readme for more supported runtimes
+  
+gem 'mini_racer', platforms: :ruby
+or 
+gem 'therubyracer'
+```
