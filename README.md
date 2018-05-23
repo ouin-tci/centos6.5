@@ -98,9 +98,6 @@ su - postgres
 #http://www.marronkun.net/linux/other/database_000014.html
 psql -l
 
-#Rails bundle install 時にpgコンパイルエラー
-yum install postgresql-devel
-
 ```
 
 # PHP5.6インストール
@@ -206,6 +203,14 @@ rbenv install --list
 yum install -y openssl-devel readline-devel zlib-devel
 rbenv install 2.2.3
 rbenv versions
+```
+
+#Rails bundle install 時にpgコンパイルエラー
+
+```
+#postgresqlのバージョンにあわせる
+$ sudo yum install postgresql94-libs
+$ sudo yum install postgresql94-devel
 ```
 
 # Ruby on Railsインストール
