@@ -205,13 +205,7 @@ rbenv install 2.2.3
 rbenv versions
 ```
 
-#Rails bundle install 時にpgコンパイルエラー
 
-```
-#postgresqlのバージョンにあわせる
-$ sudo yum install postgresql94-libs
-$ sudo yum install postgresql94-devel
-```
 
 # Ruby on Railsインストール
 ```
@@ -223,6 +217,17 @@ rbenv versions
 rbenv global 2.4.1
 
 gem install bundler
+
+# Rails bundle install 時にpgコンパイルエラー
+
+#postgresqlのバージョンにあわせる
+#sudo yum install postgresql93-libs
+#sudo yum install postgresql93-devel
+
+#No pg_config... trying anyway. If building fails, please try again with
+gem install pg -- --with-pg-config=/usr/pgsql-9.3/bin/pg_config
+
+
 gem install rails
 ```
 
