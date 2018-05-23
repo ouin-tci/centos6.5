@@ -98,6 +98,9 @@ su - postgres
 #http://www.marronkun.net/linux/other/database_000014.html
 psql -l
 
+#Rails bundle install 時にpgコンパイルエラー
+yum install postgresql-devel
+
 ```
 
 # PHP5.6インストール
