@@ -44,7 +44,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 #ログインするたびにssh-addを実行しないとだめ、めんどう
 eval $(ssh-agent -s)
-ssh-add -K ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa
 
 #中身をコピーしてGit Accountに張る
 
