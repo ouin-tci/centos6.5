@@ -221,16 +221,18 @@ gem install bundler
 gem install rails
 ```
 
-# Rails bundle install 時にpgコンパイルエラー
+# Rails bundle install 時にコンパイルエラー
 
 ```
 #No pg_config... trying anyway. If building fails, please try again with
 yum install postgresql93-devel
 gem install pg -- --with-pg-config=/usr/pgsql-9.3/bin/pg_config
 
+#sqlite3エラー
+yum install sqlite-devel
 ```
 
-# rails サーバー起動時にのえらー
+# rails サーバー起動時エラー
 
 ```
 there was an error while trying to load the gem 'uglifier'. (Bundler::GemRequireError)
