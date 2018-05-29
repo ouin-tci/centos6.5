@@ -26,6 +26,13 @@ https://www.vagrantup.com/downloads.html
 利用OSに対応するパッケージをダウンロードしてインストールする
 
 
+## Gitをインストール
+
+***git をダウンロードしてインストールする(セキュリティ警告が出た場合はControlキーを押してクリックする、インストーラを）***
+
+https://git-scm.com/download/mac
+
+
 ## git用sshキーを作成する
 
 ```
@@ -39,6 +46,39 @@ cat ~/.ssh/id_rsa.pub  | pbcopy #copyする
 https://github.com/settings/keys
 
 New SSH keyを押して、貼る
+
+```
+
+## brew install
+
+***XCode command line toolも一緒にインストールされる***
+
+↓ページの手順通りに
+
+https://brew.sh/index_ja.html
+
+```
+brew --version
+```
+
+## Rubyをインストール
+```
+brew install rbenv ruby-build
+rbenv --version
+
+rbenv install -l
+rbenv install 2.4.4 #必要なバージョンをインストール
+
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile 
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile 
+
+rbenv global 2.4.4
+
+rbenv versions
+
+ruby -v
+
 
 ```
 
