@@ -128,5 +128,19 @@ bundle exec knife solo cook vagrant-mentough nodes/vagrant-mentough.json # プ�
 
 ```
 
+## VMへログイン
+
+```
+cd path/to/mentough_kitchen/vm/dev
+vagrant ssh
+
+#色々確認します
+
+service postgresql-10 status
+ruby --version
+rbenv --version
+ls /vagrant
+
+```
 
 
