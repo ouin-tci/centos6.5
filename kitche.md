@@ -97,9 +97,11 @@ cd path/to/workspace
 
 git clone https://github.com/armg/mentough_kitchen.git
 
-cd mentough_kitchent/vm/dev
+cd path/to/mentough_kitchent/vm/dev
 
 vagrant up
+
+vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config #SSHでアクセスするための設定　設定せずにvagrant sshでもできそう
 
 ```
 
