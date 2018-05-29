@@ -60,13 +60,13 @@ ssh-add ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub  | pbcopy #copyする
 
 ```
-↓GitページにてSSHキーを設定する
+
+### ↓GitページにてSSHキーを設定する
 
 https://github.com/settings/keys
 
-New SSH keyを押して、貼る
+右上の「New SSH key」を押して、貼って登録する
 
-```
 
 ## Rubyをインストール
 ```
