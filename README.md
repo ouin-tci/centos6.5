@@ -1,5 +1,7 @@
 # vagrant でcentos6.5にGit, Apache, PostgreSQL9.3, Ruby, Ruby on Railsをインストール
 
+# HOST機(Windows)の操作
+
 VirtualBoxをインストールする。
 
 https://www.virtualbox.org/wiki/Downloads
@@ -45,6 +47,8 @@ vagrant ssh #VMにログイン
 sudo su #rootに切り替える、VMのため、セキュリティは考慮しない、全てrootで操作をする
 source ~/.bash_profile #環境定数などを適用、rootに変わるたびに実行する必要があり
 ```
+
+# 以下、Guest機(VM)の操作
 
 # curlインストール
 
