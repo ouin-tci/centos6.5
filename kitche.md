@@ -86,8 +86,20 @@ rbenv versions
 
 ruby -v
 
+gem install bunlder
+
 ```
 
+```
+#rbenv でrubyのバージョンを切り替えてできるが、うまく行かない時はrbenv versionsでrubyのバージョンを設定する箇所を表示する。
+vi で編集すれば反映する。
+
+rbenv versions
+  system
+  2.4.1
+* 2.4.4 (set by /Users/user/.ruby-version)
+
+```
 
 ## VMを立ち上げる
 ```
