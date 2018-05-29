@@ -143,4 +143,25 @@ ls /vagrant
 
 ```
 
+## PostgreSQLを外部からアクセスできるように設定する
+
+```
+#IPとポートを設定する
+vi /var/lib/pgsql/10/data/postgresql.conf 
+listen_addresses = 'localhost'
+↓
+listen_addresses = '*' 
+port = 5432
+
+vi /var/lib/pgsql/9.3/data/pg_hba.conf 
+# IPv4 local connections:
+host    all         all         127.0.0.1/32          trust
+host    all         all         0.0.0.0/0             trust
+
+#修正後DBを再起動して反映される
+service postgresql-10 restart
+```
+
+
+
 
