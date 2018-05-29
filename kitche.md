@@ -113,9 +113,10 @@ cd path/to/mentough_kitchent/vm/dev
 
 vagrant up #初回は200MB超えvagrant boxファイルをダウンロードするため、時間かかる。
 
+#共有フォルダ/vagrantをNFSでmountするためにパスワードを要求される、管理者権限のユーザーじゃないとだめ。
 #==> default: Preparing to edit /etc/exports. Administrator privileges will be required...
 #Password:"
-#管理者権限のユーザーじゃないとだめ。
+
 
 vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config #SSHでアクセスするための設定　設定せずにvagrant sshでもできそう
 
