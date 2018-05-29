@@ -123,7 +123,7 @@ vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config
 
 cd ../..
 bundle install
-bundle exec knife solo prepare vagrant-mentough  # VMゲスト側にChefをインストール。※ ここでパスワードを聞かれる場合は、トラブルシューティング参照
+bundle exec knife solo prepare vagrant-mentough  # VMゲスト側にChefをインストール。
 bundle exec knife solo cook vagrant-mentough nodes/vagrant-mentough.json # プロビジョニングされる
 
 ```
