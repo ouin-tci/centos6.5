@@ -26,12 +26,30 @@ https://www.vagrantup.com/downloads.html
 利用OSに対応するパッケージをダウンロードしてインストールする
 
 
+## brew install
+
+***XCode command line toolも一緒にインストールされる***
+
+↓ページの手順通りに
+
+https://brew.sh/index_ja.html
+
+```
+brew --version  #確認する
+```
+
+
 ## Gitをインストール
 
 ***git をダウンロードしてインストールする(セキュリティ警告が出た場合はControlキーを押してクリックする、インストーラを）***
 
 https://git-scm.com/download/mac
 
+あるいはbrewよりインストール
+
+```
+brew install git
+```
 
 ## git用sshキーを作成する
 
@@ -47,18 +65,6 @@ https://github.com/settings/keys
 
 New SSH keyを押して、貼る
 
-```
-
-## brew install
-
-***XCode command line toolも一緒にインストールされる***
-
-↓ページの手順通りに
-
-https://brew.sh/index_ja.html
-
-```
-brew --version
 ```
 
 ## Rubyをインストール
