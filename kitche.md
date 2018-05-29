@@ -40,22 +40,20 @@ brew --version  #確認する
 
 
 ## Gitをインストール
-
 ***git をダウンロードしてインストールする(セキュリティ警告が出た場合はControlキーを押してクリックする、インストーラを）***
 
 https://git-scm.com/download/mac
 
-あるいはbrewよりインストール
+***あるいはbrewよりインストール***
 
 ```
 brew install git
 ```
 
 ## git用sshキーを作成する
-
 ```
 ssh-keygen -t rsa -b 4096 -C “you@armg.jp"
-Enter連打
+#Enter連打
 
 ssh-add ~/.ssh/id_rsa
 
@@ -90,7 +88,6 @@ ruby -v
 
 
 ## VMを立ち上げる
-
 ```
 mkdir path/to/workspace
 
