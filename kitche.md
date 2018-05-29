@@ -61,6 +61,7 @@ cat ~/.ssh/id_rsa.pub  | pbcopy #copyする
 
 ```
 ↓GitページにてSSHキーを設定する
+
 https://github.com/settings/keys
 
 New SSH keyを押して、貼る
