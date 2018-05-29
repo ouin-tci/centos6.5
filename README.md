@@ -31,9 +31,13 @@ https://github.com/armg/mentough_kitchen/tree/release201806/vm/dev
 
 VagrantFileを下記フォルダーに置く
 
+***Windows7で当環境のvagrant起動だとPowerShell3が必要です。***
+
+https://docs.microsoft.com/ja-jp/powershell/scripting/setup/installing-windows-powershell?view=powershell-6
+
 ```
-mkdir ~/workspace/vagrant
-cd ~/workspace/vagrant
+mkdir path/to/workspace/vagrant
+cd path/to/workspace/vagrant
 
 vagrant up #VM起動
 vagrant ssh #VMにログイン
@@ -94,7 +98,7 @@ https://github.com/settings/keys
 #https://weblabo.oscasierra.net/postgresql-installing-postgresql9-centos6-1/
 #https://www.postgresql.jp/document/9.3/html/index.html
 #pgAdmin https://www.pgadmin.org/download/
-#vagrant box が便利　https://app.vagrantup.com/fscm/boxes/postgresql
+#既存vagrant boxを利用するのが便利かも　https://app.vagrantup.com/fscm/boxes/postgresql
 
 #Postgresql 10はこれ
 #https://yum.postgresql.org/10/redhat/rhel-6.5-x86_64/pgdg-centos10-10-1.noarch.rpm
