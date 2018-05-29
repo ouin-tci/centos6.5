@@ -1,4 +1,29 @@
-macで環境構築
+# Macで環境構築
+
+
+## VirtualBoxをインストールする。
+
+https://www.virtualbox.org/wiki/Downloads
+
+利用OSに対応するパッケージをダウンロードしてインストールする。
+
+***インストールするときにセキュリティ許可する必要がある。***
+
+***システム環境設定→セキュリティとプライバシー→左下の南京錠っぽいアイコンをクリックして設定を変更する。***
+
+```
+VirtualBox 5.2.12 platform packages
+ Windows hosts
+ OS X hosts
+ Linux distributions
+ Solaris hosts
+``` 
+
+## Vagrantをインストールする
+
+https://www.vagrantup.com/downloads.html
+
+利用OSに対応するパッケージをダウンロードしてインストールする
 
 
 ## git用sshキーを作成する
@@ -18,6 +43,9 @@ New SSH keyを押して、貼る
 ```
 
 
+## VMを立ち上げる
+
+```
 mkdir path/to/workspace
 
 cd path/to/workspace
@@ -27,4 +55,6 @@ git clone https://github.com/armg/mentough_kitchen.git
 cd mentough_kitchent/vm/dev
 
 vagrant up
+
+```
 
