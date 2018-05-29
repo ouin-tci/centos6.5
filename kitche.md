@@ -86,7 +86,6 @@ rbenv versions
 
 ruby -v
 
-
 ```
 
 
