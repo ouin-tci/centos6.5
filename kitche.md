@@ -102,6 +102,7 @@ rbenv versions
 ```
 
 ## VMを立ち上げる
+
 ```
 mkdir path/to/workspace
 
@@ -119,6 +120,11 @@ vagrant up #初回は200MB超えvagrant boxファイルをダウンロードす�
 
 #SSHでアクセスするための設定　設定せずにvagrant sshでもできそう
 vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config 
+
+cd ../..
+bundle install
+bundle exec knife solo prepare vagrant-mentough  # VMゲスト側にChefをインストール。※ ここでパスワードを聞かれる場合は、トラブルシューティング参照
+bundle exec knife solo cook vagrant-mentough nodes/vagrant-mentough.json # プロビジョニングされる
 
 ```
 
