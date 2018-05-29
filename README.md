@@ -1,21 +1,51 @@
 # vagrant でcentos6.5にGit, Apache, PostgreSQL9.3, Ruby, Ruby on Railsをインストール
 
+VirtualBoxをインストールする。
+
+https://www.virtualbox.org/wiki/Downloads
+
+利用OSに対応するパッケージをダウンロードしてインストールする
+
+```
+VirtualBox 5.2.12 platform packages
+ Windows hosts
+ OS X hosts
+ Linux distributions
+ Solaris hosts
+``` 
+
+Vagrantをインストールする
+
+https://www.vagrantup.com/downloads.html
+
+利用OSに対応するパッケージをダウンロードしてインストールする
+
+
+mentough_kitchenをcheckoutする（Host機にgitのインストールが前提です）
+
+https://github.com/armg/mentough_kitchen
+
+あるいは
+
+https://github.com/armg/mentough_kitchen/tree/release201806/vm/dev
+
 VagrantFileを下記フォルダーに置く
 
 ```
 mkdir ~/workspace/vagrant
 cd ~/workspace/vagrant
 
-vagrant up
-vagrant ssh
+vagrant up #VM起動
+vagrant ssh #VMにログイン
 
-sudo su
-source ~/.bash_profile
+sudo su #rootに切り替える、VMのため、セキュリティは考慮しない、全てrootで操作をする
+source ~/.bash_profile #環境定数などを適用、rootに変わるたびに実行する必要があり
 ```
 
 # curlインストール
 
 ```
+#バージョンアップしとく
 #curl : (1) Protocol https not supported or disabled in libcurl
 #https://stackoverflow.com/questions/19015282/how-do-i-enable-https-support-in-libcurl
 
@@ -40,6 +70,8 @@ yum install -y git
 #https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 #https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
 
+#sshでgithubにログインできるよう
+
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 #ログインするたびにssh-addを実行しないとだめ、めんどう
@@ -57,14 +89,21 @@ https://github.com/settings/keys
 # PostgreSQL インストール
 
 ```
+
 #https://yum.postgresql.org/9.3/redhat/rhel-6.5-x86_64/
 #https://weblabo.oscasierra.net/postgresql-installing-postgresql9-centos6-1/
 #https://www.postgresql.jp/document/9.3/html/index.html
 #pgAdmin https://www.pgadmin.org/download/
 #vagrant box が便利　https://app.vagrantup.com/fscm/boxes/postgresql
 
+#Postgresql 10はこれ
+#https://yum.postgresql.org/10/redhat/rhel-6.5-x86_64/pgdg-centos10-10-1.noarch.rpm
+
+#取り合えず9.3をインストール
 yum -y localinstall https://yum.postgresql.org/9.3/redhat/rhel-6.5-x86_64/pgdg-centos93-9.3-3.noarch.rpm
 yum -y install postgresql93-server
+
+#postgresql-#{version}で操作する
 
 #DB初期化
 service postgresql-9.3 initdb
@@ -81,7 +120,7 @@ listen_addresses = 'localhost'
 listen_addresses = '*' 
 port = 5432
 
-#外部からアクセスできるように
+#外部からアクセスできるように、修正後DBを再起動して反映される
 vi /var/lib/pgsql/9.3/data/pg_hba.conf 
 # IPv4 local connections:
 host    all         all         127.0.0.1/32          trust
@@ -101,7 +140,7 @@ psql -l
 
 ```
 
-# PHP5.6インストール
+# PHP5.6インストール（Moodle1.9系をインストールする場合のみ）
 
 ```
 #https://www.miraclelinux.com/tech-blog/bw58yw
@@ -113,7 +152,7 @@ yum install --enablerepo=remi --enablerepo=remi-php56 php php-opcache php-devel 
 
 ```
 
-# PHP7インストール
+# PHP7インストール（Moodle3.4系をインストールする場合のみ）
 
 ```
 #http://sonaiyuutemo.hatenablog.jp/entry/2017/05/19/172019
@@ -140,7 +179,7 @@ echo '<?php
 
 ````
 
-# Apache確認
+# Apache確認（Moodleをインストールする場合のみ）
 ```
 #https://qiita.com/a-killer-bee/items/d679cb893f64ff18ad8f
 #既にApacheがインスールされている場合はアンインストール
@@ -213,9 +252,9 @@ rbenv versions
 #http://railsdoc.com/setup
 
 rbenv install --list 
-rbenv install 2.4.1
+rbenv install 2.4.4
 rbenv versions 
-rbenv global 2.4.1
+rbenv global 2.4.4
 
 gem install bundler
 gem install rails
