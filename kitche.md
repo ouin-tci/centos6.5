@@ -99,7 +99,7 @@ git clone https://github.com/armg/mentough_kitchen.git
 
 cd path/to/mentough_kitchent/vm/dev
 
-vagrant up
+vagrant up #初回は200MB超えvagrant boxファイルをダウンロードするため、時間かかる。
 
 vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config #SSHでアクセスするための設定　設定せずにvagrant sshでもできそう
 
