@@ -62,6 +62,7 @@ pbcopy < ~/.ssh/id_rsa.pub #publicキーをcopyする
 ```
 
 ### ↓GitページにてSSHキーを設定する
+> 手順： https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 https://github.com/settings/keys
 
