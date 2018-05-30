@@ -51,6 +51,8 @@ brew install git
 ```
 
 ## git用sshキーを作成する
+> 手順： https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
 ```
 ssh-keygen -t rsa -b 4096 -C “you@armg.jp"
 #Enter連打
@@ -62,7 +64,6 @@ pbcopy < ~/.ssh/id_rsa.pub #publicキーをcopyする
 ```
 
 ### ↓GitページにてSSHキーを設定する
-> 手順： https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 https://github.com/settings/keys
 
