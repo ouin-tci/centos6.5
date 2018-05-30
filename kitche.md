@@ -57,7 +57,7 @@ brew install git
 ssh-keygen -t rsa -b 4096 -C “you@armg.jp"
 #Enter連打
 
-ssh-add ~/.ssh/id_rsa
+ssh-add -K ~/.ssh/id_rsa
 
 pbcopy < ~/.ssh/id_rsa.pub #publicキーをcopyする
 
