@@ -57,7 +57,7 @@ ssh-keygen -t rsa -b 4096 -C “you@armg.jp"
 
 ssh-add ~/.ssh/id_rsa
 
-cat ~/.ssh/id_rsa.pub  | pbcopy #copyする
+pbcopy < ~/.ssh/id_rsa.pub #publicキーをcopyする
 
 ```
 
