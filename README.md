@@ -1,4 +1,8 @@
 # vagrant でcentos6.5にGit, Apache, PostgreSQL9.3, Ruby, Ruby on Railsをインストール
+## chefを利用するとWindows ではChef Client インストールする必要がある。
+### https://downloads.chef.io/chef#options
+### 実際にどんなAPPをインストールしたのを把握するため、WindowsでのVM環境作成は手動で行う。
+
 
 # HOST機(Windows)の操作
 
@@ -189,6 +193,7 @@ echo '<?php
 
 # Apache確認（Moodleをインストールする場合のみ）
 ```
+#基本的にすでにOSにインストールしたはず
 #https://qiita.com/a-killer-bee/items/d679cb893f64ff18ad8f
 #既にApacheがインスールされている場合はアンインストール
 
