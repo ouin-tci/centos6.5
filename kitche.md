@@ -138,6 +138,11 @@ vagrant up #初回は200MB超えvagrant boxファイルをダウンロードす�
 #ChefがSSHでアクセスするための設定
 vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config 
 
+```
+
+## 環境を作成する。
+
+```
 cd ../..
 bundle install
 bundle exec knife solo prepare vagrant-mentough  # VMゲスト側にChefをインストール。
@@ -174,6 +179,13 @@ cat ~/.ssh/id_rsa.pub #publicキーをcopyする
 #ssh key Fingerprintを確認する方法
 #ssh-keygen -E md5 -lf ~/.ssh/id_dsa.pub
 
+```
+
+## 各アプリをセットアップする
+```
+git clone git@github.com:armg/tools.git --branch master --single-branch /vagrant/mflow
+cd /vagrant/mflow
+./mflow init
 ```
 
 ## PostgreSQLを外部からアクセスできるように設定する（オプション）
