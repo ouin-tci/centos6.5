@@ -54,7 +54,7 @@ brew install git
 > 手順： https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 ```
-ssh-keygen -t rsa -b 4096 -C “you@armg.jp"
+ssh-keygen -t rsa -b 4096 -C "you@armg.jp"
 #Enter連打
 
 ssh-add -K ~/.ssh/id_rsa
@@ -167,7 +167,7 @@ ls /vagrant
 ## VMの中にもGitのSSHキーを作成してGithubに登録する。
 
 ```
-ssh-keygen -t rsa -b 4096 -C “you@armg.jp"
+ssh-keygen -t rsa -b 4096 -C "you@armg.jp"
 #Enter連打
 
 #ログインするたびにssh-addを実行しないとだめ
