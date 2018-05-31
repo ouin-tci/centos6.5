@@ -223,7 +223,50 @@ rbenv install 2.4.1
 
 ./mflow init
 
+#postgresql Gemの依存ライブラリ
+sudo yum -y install postgresql10-devel
+
+cd /vagrant/mflow/MTOP2/
+cp config/database.yml.example config/database.yml
+cp config/settings.local.yml.sample config/settings.local.yml
+#postgresql 10 のgemをインストールする
+gem install pg -- --with-pg-config=/usr/pgsql-10/bin/pg_config
+bundle install
+
+cd /vagrant/mflow/mentough/
+cp config/database.yml.example config/database.yml
+cp config/settings.local.yml.sample config/settings.local.yml
+#postgresql 10 のgemをインストールする
+bundle install
+
+
+cd /vagrant/mflow/mentough_common/
+cp config/settings.local.yml.sample config/settings.local.yml
+
 ```
+
+## PostgreSQL PW設定とDB作成
+
+```
+sudo passwd postgres
+#postgresに設定する
+
+su - postgres
+createdb MTOP2 #DBを作成する
+psql -l | grep MTOP2      #DBを確認する
+exit
+```
+
+
+## Ruby on Railsをインストール
+
+```
+gem install rails
+
+rails db:migrate 
+
+```
+
 
 ## PostgreSQLを外部(PgAdmin)からアクセスできるように設定する（オプション）
 
