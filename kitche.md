@@ -69,6 +69,21 @@ https://github.com/settings/keys
 
 右上の「New SSH key」を押して、貼って登録する
 
+> ssh public key が登録されたら git clone git@github.comのように操作できない事があり。
+> いろいろ調べたが、解明できななかった。 git clone https://github.com/armg/tools.git でcloneできる。
+
+```
+git clone git@github.com:armg/tools.git
+Cloning into 'tools'...
+ssh_exchange_identification: read: Operation timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+```
+
+
 
 ## Rubyをインストール
 ```
