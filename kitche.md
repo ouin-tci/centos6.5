@@ -196,6 +196,24 @@ chmod 600 /home/vagrant/.ssh/config
 
 ## 各アプリをセットアップする
 ```
+#herokuのエラーが発生するため、元手順の説明で、mflowファイルのL41をコメントアウトする。
+
+#heroku plugins:install git@github.com:armg/heroku-config.git
+#heroku-cli: Updating to 5.12.0-211263f... 21.5 MB/21.5 MB
+#Installing plugin git@github.com:armg/heroku-config.git... !
+# ▸    Error installing package. 
+# ▸    npm ERR! Linux 2.6.32-431.el6.x86_64
+#....
+
+vi /vagrant/mflow/mflow
+
+#L41
+#cmd "heroku plugins:install #{app_to_armg('heroku-config')}"
+
+
+```
+
+```
 git clone git@github.com:armg/tools.git --branch master --single-branch /vagrant/mflow
 cd /vagrant/mflow
 ./mflow init
