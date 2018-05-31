@@ -179,6 +179,13 @@ cat ~/.ssh/id_rsa.pub #publicキーをcopyする
 #ssh key Fingerprintを確認する方法
 #ssh-keygen -E md5 -lf ~/.ssh/id_dsa.pub
 
+#Bad ownerエラー
+ssh -v -T git@github.com
+OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013
+Bad owner or permissions on /home/vagrant/.ssh/config
+--------------------
+chmod 600 ~/.ssh/config
+
 ```
 
 ## 各アプリをセットアップする
