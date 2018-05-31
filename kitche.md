@@ -135,7 +135,7 @@ vagrant up #初回は200MB超えvagrant boxファイルをダウンロードす�
 #==> default: Preparing to edit /etc/exports. Administrator privileges will be required...
 #Password:"
 
-#SSHでアクセスするための設定　設定せずにvagrant sshでもできそう
+#ChefがSSHでアクセスするための設定
 vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config 
 
 cd ../..
