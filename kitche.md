@@ -199,6 +199,12 @@ chmod 600 /home/vagrant/.ssh/config
 git clone git@github.com:armg/tools.git --branch master --single-branch /vagrant/mflow
 cd /vagrant/mflow
 ./mflow init
+
+#rbenv: version `2.4.1' is not installed (set by /vagrant/mflow/.ruby-version)
+rbenv install 2.4.1
+
+./mflow init
+
 ```
 
 ## PostgreSQLを外部(PgAdmin)からアクセスできるように設定する（オプション）
