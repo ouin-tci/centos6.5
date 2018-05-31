@@ -159,6 +159,22 @@ rbenv --version
 ls /vagrant
 
 ```
+## VMの中にもGitのSSHキーを作成してGithubに登録する。
+
+```
+ssh-keygen -t rsa -b 4096 -C “you@armg.jp"
+#Enter連打
+
+#ログインするたびにssh-addを実行しないとだめ
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+cat ~/.ssh/id_rsa.pub #publicキーをcopyする
+
+#ssh key Fingerprintを確認する方法
+#ssh-keygen -E md5 -lf ~/.ssh/id_dsa.pub
+
+```
 
 ## PostgreSQLを外部からアクセスできるように設定する（オプション）
 
