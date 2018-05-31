@@ -54,6 +54,9 @@ brew install git
 > 手順： https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 ```
+#Enterキー連打でも作成できるが、複数キーを作成する場合は、なんか入力しないとGithubに設定しても使えなそう、
+#ハマった。注意してください。
+
 ssh-keygen -t rsa -b 4096 -C "you@armg.jp"
 Enter file in which to save the key (/Users/administrator/.ssh/id_rsa):  #デフォルトはid_rsa
 Enter passphrase (empty for no passphrase): #なんか入力する、ssh-addのするときに聞かれる
@@ -63,14 +66,12 @@ ssh-add -K ~/.ssh/id_rsa
 
 pbcopy < ~/.ssh/id_rsa.pub #publicキーをcopyする
 
-
-
 #Macでssh key Fingerprintを確認する方法
-#ssh-keygen -E md5 -lf ~/.ssh/id_dsa.pub
+#ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub
 
 ```
 
-### ↓GitページにてSSHキーを設定する
+### GithubページにてSSHキーを設定する
 
 https://github.com/settings/keys
 
@@ -89,8 +90,6 @@ Please make sure you have the correct access rights
 and the repository exists.
 
 ```
-
-
 
 ## Rubyをインストール
 ```
@@ -191,7 +190,7 @@ ssh -v -T git@github.com
 OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013
 Bad owner or permissions on /home/vagrant/.ssh/config
 --------------------
-chmod 600 ~/.ssh/config
+chmod 600 /home/vagrant/.ssh/config
 
 ```
 
