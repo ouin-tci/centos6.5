@@ -214,7 +214,7 @@ vi /vagrant/mflow/mflow
 ```
 
 ```
-git clone git@github.com:armg/tools.git --branch master --single-branch /vagrant/mflow
+git clone git@github.com:armg/tools.git --branch master /vagrant/mflow
 cd /vagrant/mflow
 ./mflow init
 
