@@ -63,6 +63,11 @@ ssh-add -K ~/.ssh/id_rsa
 
 pbcopy < ~/.ssh/id_rsa.pub #publicキーをcopyする
 
+
+
+#Macでssh key Fingerprintを確認する方法
+#ssh-keygen -E md5 -lf ~/.ssh/id_dsa.pub
+
 ```
 
 ### ↓GitページにてSSHキーを設定する
@@ -180,9 +185,6 @@ eval $(ssh-agent -s) #こっちはLinuxで実行しないとだめ
 ssh-add ~/.ssh/id_rsa
 
 cat ~/.ssh/id_rsa.pub #publicキーをcopyする
-
-#ssh key Fingerprintを確認する方法
-#ssh-keygen -E md5 -lf ~/.ssh/id_dsa.pub
 
 #Bad ownerエラー
 ssh -v -T git@github.com
