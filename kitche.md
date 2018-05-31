@@ -59,7 +59,7 @@ brew install git
 
 ssh-keygen -t rsa -b 4096 -C "you@armg.jp"
 Enter file in which to save the key (/Users/administrator/.ssh/id_rsa):  #デフォルトはid_rsa
-Enter passphrase (empty for no passphrase): #なんか入力する、ssh-addのするときに聞かれる
+Enter passphrase (empty for no passphrase): #なんか入力する、ssh-addするときに聞かれる
 Enter same passphrase again: 
 
 ssh-add -K ~/.ssh/id_rsa
@@ -175,7 +175,7 @@ ls /vagrant
 ```
 ssh-keygen -t rsa -b 4096 -C "you@armg.jp"
 Enter file in which to save the key (/Users/administrator/.ssh/id_rsa):  #デフォルトはid_rsa
-Enter passphrase (empty for no passphrase): #なんか入力する、ssh-addのするときに聞かれる
+Enter passphrase (empty for no passphrase): #なんか入力する、ssh-addするときに聞かれる
 Enter same passphrase again: 
 
 
