@@ -188,7 +188,7 @@ cd /vagrant/mflow
 ./mflow init
 ```
 
-## PostgreSQLを外部からアクセスできるように設定する（オプション）
+## PostgreSQLを外部(PgAdmin)からアクセスできるように設定する（オプション）
 
 ```
 #IPとポートを設定する
