@@ -254,21 +254,14 @@ rbenv --version
 ```
 rbenv install --list
 yum install -y openssl-devel readline-devel zlib-devel
-rbenv install 2.2.3
+rbenv install 2.4.4
 rbenv versions
+rbenv global 2.4.4
 ```
-
-
 
 # Ruby on Railsインストール
 ```
 #http://railsdoc.com/setup
-
-rbenv install --list 
-rbenv install 2.4.4
-rbenv versions 
-rbenv global 2.4.4
-
 gem install bundler
 gem install rails
 ```
