@@ -172,6 +172,16 @@ ls /vagrant
 ```
 ## VMの中にもGitのSSHキーを作成してGithubに登録する。
 
+### Host機からコピーする方法
+```
+#Host
+cp -r ~/.ssh path/to/mentough_kitchen/vm/dev/
+
+#Guest(VM)
+cp -r vagrant/.ssh ~/
+
+```
+### 新規に登録する方法
 ```
 ssh-keygen -t rsa -b 4096 -C "you@armg.jp"
 Enter file in which to save the key (/Users/administrator/.ssh/id_rsa):  #デフォルトはid_rsa
@@ -193,15 +203,7 @@ Bad owner or permissions on /home/vagrant/.ssh/config
 chmod 600 /home/vagrant/.ssh/config
 
 ```
-### Host機からコピーするのが便利
-```
-#Host
-cp -r ~/.ssh path/to/mentough_kitchen/vm/dev/
 
-#Guest(VM)
-cp -r vagrant/.ssh ~/
-
-```
 
 
 
