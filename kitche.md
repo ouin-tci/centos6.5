@@ -193,6 +193,17 @@ Bad owner or permissions on /home/vagrant/.ssh/config
 chmod 600 /home/vagrant/.ssh/config
 
 ```
+### Host機からコピーするのが便利
+```
+#Host
+cp -r ~/.ssh path/to/mentough_kitchen/vm/dev/
+
+#Guest(VM)
+cp -r vagrant/.ssh ~/
+
+```
+
+
 
 ## 各アプリをセットアップする
 ```
