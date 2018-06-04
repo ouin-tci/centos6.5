@@ -321,6 +321,7 @@ service postgresql-10 restart
 
 ## rails db:migrateを実行して以下のようなエラーが出たら
 Vagrantfileののフォルダ共有設定から :nfs => true を外したら直る
+
 https://www.tcmobile.jp/dev_blog/programming/仮想マシンのファイルシステムがおかしくなってmi/
 
 ```
