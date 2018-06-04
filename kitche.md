@@ -300,7 +300,7 @@ service postgresql-10 restart
 ```
 
 ## rails db:migrateを実行して以下のようなエラーが出たら
-## Vagrantfileののフォルダ共有設定から :nfs => true を外したら直る
+Vagrantfileののフォルダ共有設定から :nfs => true を外したら直る
 
 ```
 
