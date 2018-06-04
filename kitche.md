@@ -133,7 +133,7 @@ vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config
 
 ```
 
-## 環境を作成する。
+## VMの環境を作成する
 
 ```
 cd path/to/mentough_kitchent
@@ -190,9 +190,6 @@ Bad owner or permissions on /home/vagrant/.ssh/config
 chmod 600 /home/vagrant/.ssh/config
 
 ```
-
-
-
 
 ## 各アプリをセットアップする
 ```
@@ -267,7 +264,6 @@ pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d MTO
 exit
 ```
 
-
 ## Ruby on Railsをインストール
 
 ```
@@ -297,7 +293,6 @@ rails server -b 0.0.0.0 -p 3001
 127.0.0.1:3001
 
 ```
-
 
 ## PostgreSQLを外部(PgAdmin)からアクセスできるように設定する（オプション）
 
