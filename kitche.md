@@ -209,6 +209,10 @@ chmod 600 /home/vagrant/.ssh/config
 
 ## 各アプリをセットアップする
 ```
+
+git clone git@github.com:armg/tools.git --branch master /vagrant/mflow
+cd /vagrant/mflow
+
 #herokuのエラーが発生するため、元手順の説明で、mflowファイルのL41をコメントアウトする。
 
 #heroku plugins:install git@github.com:armg/heroku-config.git
@@ -224,17 +228,11 @@ vi /vagrant/mflow/mflow
 #cmd "heroku plugins:install #{app_to_armg('heroku-config')}"
 
 
-```
-
-```
-git clone git@github.com:armg/tools.git --branch master /vagrant/mflow
-cd /vagrant/mflow
 ./mflow init
 
+#rubyバージョンエラーが発生する場合。
 #rbenv: version `2.4.1' is not installed (set by /vagrant/mflow/.ruby-version)
-rbenv install 2.4.1
-
-./mflow init
+#rbenv install 2.4.1
 
 #postgresql Gemの依存ライブラリ
 sudo yum -y install postgresql10-devel
