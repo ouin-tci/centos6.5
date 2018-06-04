@@ -136,7 +136,7 @@ vagrant ssh-config --host vagrant-mentough >> ~/.ssh/config
 ## 環境を作成する。
 
 ```
-cd ../..
+cd path/to/mentough_kitchent
 bundle install
 bundle exec knife solo prepare vagrant-mentough  # VMゲスト側にChefをインストール。
 bundle exec knife solo cook vagrant-mentough nodes/vagrant-mentough.json # プロビジョニングされる
