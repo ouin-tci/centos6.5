@@ -315,10 +315,8 @@ service postgresql-10 restart
 ```
 
 ## rails db:migrateを実行して以下のようなエラーが出たら
-~~Vagrantfileののフォルダ共有設定から :nfs => true を外したら直る~~
 
-~~https://www.tcmobile.jp/dev_blog/programming/仮想マシンのファイルシステムがおかしくなってmi/~~
-
+macOS 10.13.1 High Sierraで発生する。
 MacOSバージョンアップをすれば解決する。
 
 https://applech2.com/archives/20171209-vagrant-nfs-high-sierra-file-sync-issue.html
