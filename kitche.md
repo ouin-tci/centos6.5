@@ -114,8 +114,8 @@ gem install bunlder
 ```
 
 ```
-#rbenv でrubyのバージョンを切り替えてできるが、うまく行かない時はrbenv versionsでrubyのバージョンを設定する箇所を表示する。
-vi で編集すれば反映する。
+#rbevn versionsコマンドはrubyのバーション設定を見ることができる
+#set by /path/to/.ruby_versionが表示された場合は、rbenv localコマンドで設定したため。
 
 rbenv versions
   system
