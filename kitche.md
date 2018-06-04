@@ -254,6 +254,14 @@ bundle install
 cd /vagrant/mflow/mentough_common/
 cp config/settings.local.yml.sample config/settings.local.yml
 
+
+
+#フォルダーを分かりやすくするため、/agrantに移動する
+cd /vagrant/mflow/
+mv MTOP2 /vagrant
+mv mentough /vagrant
+mv mentough_common /vagrant
+
 ```
 
 ## PostgreSQL PW設定とDB作成
@@ -274,7 +282,28 @@ exit
 ```
 gem install rails
 
+```
+
+## アプリを起動する。
+
+```
+#管理者画面
+cd /vagrant/MTOP2
+
 rails db:migrate 
+
+rails server -b 0.0.0.0
+
+#HOST機で以下URLへアクセス
+127.0.0.1:3000/admin
+
+#従業員画面
+cd /vagrant/mentough
+
+rails server -b 0.0.0.0 -p 3001
+
+#HOST機で以下URLへアクセス
+127.0.0.1:3001
 
 ```
 
