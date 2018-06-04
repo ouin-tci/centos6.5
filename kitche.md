@@ -299,6 +299,25 @@ host    all         all         0.0.0.0/0             trust
 service postgresql-10 restart
 ```
 
+## rails db:migrateを実行して以下のようなエラーが出たら
+## Vagrantfileののフォルダ共有設定から :nfs => true を外したら直る
+
+```
+
+[vagrant@vagrant-local-mentough MTOP2]$ rails db:migrate
+rails aborted!
+FactoryBot::DuplicateDefinitionError: Factory already registered: user
+/vagrant/MTOP2/spec/factories/users.rb:2:in `block in <top (required)>'
+/vagrant/MTOP2/spec/factories/users.rb:1:in `<top (required)>'
+/vagrant/MTOP2/config/environment.rb:5:in `<top (required)>'
+/vagrant/MTOP2/bin/rails:9:in `require'
+/vagrant/MTOP2/bin/rails:9:in `<top (required)>'
+/vagrant/MTOP2/bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Tasks: TOP => db:migrate => environment
+(See full trace by running task with --trace)
+```
 
 
 
