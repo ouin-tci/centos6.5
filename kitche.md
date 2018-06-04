@@ -258,8 +258,12 @@ sudo passwd postgres
 #postgresに設定する
 
 su - postgres
-createdb MTOP2 #DBを作成する
+createdb -U postgres MTOP2 #DBを作成する
 psql -l | grep MTOP2      #DBを確認する
+
+#DB Dumpファイルをインポートする
+pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d MTOP2 /path/to/dumpfile
+
 exit
 ```
 
