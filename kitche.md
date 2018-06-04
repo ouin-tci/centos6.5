@@ -245,7 +245,7 @@ gem install pg -- --with-pg-config=/usr/pgsql-10/bin/pg_config
 bundle install
 
 cd /vagrant/mflow/mentough/
-cp config/database.yml.example config/database.yml
+cp config/database.yml.sample config/database.yml
 cp config/settings.local.yml.sample config/settings.local.yml
 #postgresql 10 のgemをインストールする
 bundle install
