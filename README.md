@@ -287,3 +287,19 @@ gem 'mini_racer', platforms: :ruby
 or 
 gem 'therubyracer'
 ```
+
+# sambaをインストール
+
+https://daichan.club/linux/573
+
+# phantomjs をインストール
+
+```
+#https://www.craneto.co.jp/archives/1203/#yum
+$ wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+$ tar jxvf phantomjs-2.1.1-linux-x86_64.tar.bz2
+# お使いの環境により /usr/bin/ を /usr/local/bin/ に書き換えてください
+$ cp phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/
+$ phantomjs -v
+# phantomjs -v でパーミッション・エラーが出る場合には適宜パーミッション変更のこと
+```
