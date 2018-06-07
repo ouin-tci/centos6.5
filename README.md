@@ -302,4 +302,31 @@ $ tar jxvf phantomjs-2.1.1-linux-x86_64.tar.bz2
 $ cp phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/
 $ phantomjs -v
 # phantomjs -v でパーミッション・エラーが出る場合には適宜パーミッション変更のこと
+
+
+
+1. 日本語を使うように環境設定する
+sudo yum groupinstall "Japanese Support"
+
+sudo localedef -f UTF-8 -i ja_JP ja_JP.utf8
+
+以下を~/.bash_profileに追記
+
+LANG=ja_JP.UTF-8
+
+export LANG
+
+2. PhantomJSが日本語フォントとして認識できるフォントをインストールする
+sudo yum -y install mkfontdir mkfontscale
+wget "http://sourceforge.jp/frs/redir.php?m=osdn&f=%2Fmix-mplus-ipa%2F59021%2Fmigmix-medium-20130702.tar.xz"
+tar Jxf redir.php\?m\=osdn\&f\=%2Fmix-mplus-ipa%2F59021%2Fmigmix-medium-20130702.tar.xz
+cd migmix-medium-20130702/
+mkdir -p /usr/share/fonts/ipa/TrueType
+cp migmix-* /usr/share/fonts/ipa/TrueType/
+mkfontdir
+mkfontscale
+fc-cache -f -v
+
+
 ```
+
