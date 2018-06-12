@@ -347,4 +347,12 @@ psql -V
 
 initdb /usr/local/var/postgres/data/10
 pg_ctl -D /usr/local/var/postgres/data/10 -l logfile start
+
+
+#brewに関するservicesコマンド
+brew services start postgresql
+brew services stop postgresql
+brew services restart postgresql
+brew services list
+
 ```
