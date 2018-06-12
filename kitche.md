@@ -347,19 +347,20 @@ psql -V
 
 initdb /usr/local/var/postgres/data/10
 pg_ctl -D /usr/local/var/postgres/data/10 -l logfile start
+#pg_ctl -D /usr/local/var/postgres/data/10 -l logfile restart
 
 createuser -P -s <ユーザー名> #postgres/postgresに設定する
 
-#brewに関するservicesコマンド
-brew services start postgresql
-brew services stop postgresql
-brew services restart postgresql
-brew services list
+#brewに関するservicesコマンド(initdbで作成したDBと関係なさそう）
+#brew services start postgresql
+#brew services stop postgresql
+#brew services restart postgresql
+#brew services list
 
 
 # PostgreSQLを外部(PgAdmin)からアクセスできるように設定する（オプション）を参照
-vi /usr/local/var/postgres/postgresql.conf 
-vi /usr/local/var/postgres/pg_hba.conf
+vi /usr/local/var/postgres/data/10/postgresql.conf 
+vi /usr/local/var/postgres/data/10/pg_hba.conf
 #再起動
 brew services restart postgresql
 
