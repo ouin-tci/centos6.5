@@ -363,4 +363,8 @@ vi /usr/local/var/postgres/pg_hba.conf
 #再起動
 brew services restart postgresql
 
+MTOP2, mentoughのconfig/database.ymlを修正
+host: localhost
+↓
+host: 192.168.33.1  #VMが作成したIP、或いはHost機のIP
 ```
