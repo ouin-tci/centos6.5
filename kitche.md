@@ -343,6 +343,7 @@ Tasks: TOP => db:migrate => environment
 
 ```
 # 自動起動設定は設定してない。
+# https://gist.github.com/STAR-ZERO/c2efa999d1e9c7dcc7d7
 brew install postgresql
 psql -V
 
