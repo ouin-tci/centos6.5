@@ -362,7 +362,7 @@ createuser -P -s <ユーザー名> #postgres/postgresに設定する
 vi /usr/local/var/postgres/data/10/postgresql.conf 
 vi /usr/local/var/postgres/data/10/pg_hba.conf
 #再起動
-brew services restart postgresql
+pg_ctl -D /usr/local/var/postgres/data/10 -l logfile restart
 
 MTOP2, mentoughのconfig/database.ymlを修正
 host: localhost
