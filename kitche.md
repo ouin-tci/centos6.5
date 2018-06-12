@@ -371,5 +371,5 @@ pg_ctl -D /usr/local/var/postgres/data/10 -l logfile restart
 MTOP2, mentoughのconfig/database.ymlを修正
 host: localhost
 ↓
-host: 192.168.33.1  #VMが作成したIP(或いはHost機のIP)
+host: Host機のIP 
 ```
