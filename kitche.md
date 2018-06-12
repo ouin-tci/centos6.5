@@ -342,8 +342,10 @@ Tasks: TOP => db:migrate => environment
 ## brewでMacOSにPostgreSQLをインストール
 
 ```
+# VMのストレージが不足のため、DBのみをHost機に分離する。
 # 自動起動設定は設定してない。
-# https://gist.github.com/STAR-ZERO/c2efa999d1e9c7dcc7d7
+# 参考に https://gist.github.com/STAR-ZERO/c2efa999d1e9c7dcc7d7
+
 brew install postgresql
 psql -V
 
@@ -369,5 +371,5 @@ pg_ctl -D /usr/local/var/postgres/data/10 -l logfile restart
 MTOP2, mentoughのconfig/database.ymlを修正
 host: localhost
 ↓
-host: 192.168.33.1  #VMが作成したIP、或いはHost機のIP
+host: 192.168.33.1  #VMが作成したIP(或いはHost機のIP)
 ```
