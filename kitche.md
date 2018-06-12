@@ -342,6 +342,7 @@ Tasks: TOP => db:migrate => environment
 ## brewでMacOSにPostgreSQLをインストール
 
 ```
+# 自動起動設定は設定してない。
 brew install postgresql
 psql -V
 
