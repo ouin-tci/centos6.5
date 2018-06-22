@@ -340,3 +340,30 @@ fc-cache -f -v
 
 ```
 
+#  sandboxからmoodleへアクセス
+```
+1. VgrantでMoodle VMを作成してsshでログインする
+2. rbenvのインストール
+3. Rubyのインストール
+
+# HOST機にあるMoodle VM のprivate_keyをsandboxに持ち込み
+#C:/workspace/mentough_kitchen/vm/moodle/.vagrant/machines/default/virtualbox/private_key
+
+chmod 600 path/to/private_key
+
+
+$ vi ~/.ssh/config
+Host vagrant-moodle
+  HostName XX.XX.XX.XX
+  User vagrant
+  Port 22
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile path/to/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+# knifeでMoodle環境作成
+bundle exec knife solo prepare vagrant-moodle
+```
