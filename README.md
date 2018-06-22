@@ -258,6 +258,16 @@ rbenv install 2.4.4
 rbenv versions
 rbenv global 2.4.4
 ```
+```
+# 依存ライブラリが古かったりなかったりすると失敗して
+# 以下のようなログを吐くので、指示通りにすれば解決できるはず
+The Ruby openssl extension was not compiled.
+The Ruby readline extension was not compiled.
+The Ruby zlib extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `yum install -y openssl-devel readline-devel zlib-devel` to fetch missing dependencies.
+```
+
 
 # Ruby on Railsインストール
 ```
