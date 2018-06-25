@@ -18,6 +18,10 @@ sudo cp server.key.nopass /etc/httpd/ssl/key
 ## host
 csr, crt, key
 cat server.csr
+
+#linux?
+export "EDITOR=vim"
+
 EDITOR=vim bundle exec knife solo data bag create certificates csr
 
 knife data bag show certificates csr --secret-file ./encrypted_data_bag_secret --local
