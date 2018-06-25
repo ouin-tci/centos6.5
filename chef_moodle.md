@@ -1,4 +1,7 @@
+https://cross-black777.hatenablog.com/entry/2016/04/27/090000
 ```
+openssl rand -base64 512 > encrypted_data_bag_secret
+
 openssl genrsa -aes128 2048 > server.key
 openssl rsa -in server.key  -out server.key.nopass
 
