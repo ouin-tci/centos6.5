@@ -20,7 +20,7 @@ csr, crt, key
 cat server.csr
 
 #linux?
-export "EDITOR=vim"
+export EDITOR=$(which vi)
 
 EDITOR=vim bundle exec knife solo data bag create certificates csr
 
