@@ -39,6 +39,7 @@ package %w(nss curl libcurl) do
   action :upgrade
 end
 
+mkdir /var/run/postgresql
 chown postgres:postgres /var/run/postgresql
 
 ```
