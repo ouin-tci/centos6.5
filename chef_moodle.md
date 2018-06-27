@@ -1,5 +1,7 @@
 https://cross-black777.hatenablog.com/entry/2016/04/27/090000
 ```
+yum update -y nss curl libcurl
+
 openssl rand -base64 512 > encrypted_data_bag_secret
 
 openssl genrsa -aes128 2048 > server.key
@@ -21,8 +23,7 @@ cat server.csr
 
 #linux?
 export EDITOR=$(which vi)
-
-EDITOR=vim bundle exec knife solo data bag create certificates csr
+bundle exec knife solo data bag create certificates csr
 
 knife data bag show certificates csr --secret-file ./encrypted_data_bag_secret --local
 
@@ -32,5 +33,10 @@ bundle exec knife solo cook vagrant-moodle nodes/vagrant-moodle.json
 
 rm -f /var/lock/subsys/httpd
 
+git.rb
++
+package %w(nss curl libcurl) do
+  action :upgrade
+end
 
 ```
