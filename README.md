@@ -92,7 +92,6 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 
 #中身をコピーしてGit Accountに張る
-
 cat ~/.ssh/id_rsa.pub
 
 #github ssh key url
