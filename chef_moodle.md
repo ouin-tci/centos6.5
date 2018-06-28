@@ -41,4 +41,12 @@ server.rb
 mkdir /var/run/postgresql
 chmod 777 /var/run/postgresql
 ln -s /var/run/postgresql/.s.PGSQL.5432 /tmp/
+
+
+#awscli にpython 2.7
+sudo yum update # update yum
+sudo yum install centos-release-scl # install SCL 
+sudo yum install python27 # install Python 2.7
+scl enable python27 bash
 ```
+
