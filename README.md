@@ -84,6 +84,7 @@ yum install -y git
 
 #sshでgithubにログインできるよう
 
+#デフォルトは[id_rsa]を作成する
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 #ログインするたびにssh-addを実行しないとだめ、めんどう
