@@ -15,8 +15,6 @@ openssl x509 -in server.csr -days 36500 -req -signkey server.key.nopass > server
 sudo cp server.crt /etc/httpd/ssl/crt 
 sudo cp server.key.nopass /etc/httpd/ssl/key 
 
-
-
 ## host
 csr, crt, key
 cat server.csr
@@ -39,7 +37,8 @@ package %w(nss curl libcurl) do
   action :upgrade
 end
 
+server.rb
 mkdir /var/run/postgresql
-chown postgres:postgres /var/run/postgresql
-
+chmod 777 /var/run/postgresql
+ln -s /var/run/postgresql/.s.PGSQL.5432 /tmp/
 ```
