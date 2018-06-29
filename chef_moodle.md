@@ -48,5 +48,8 @@ sudo yum update # update yum
 sudo yum install centos-release-scl # install SCL 
 sudo yum install python27 # install Python 2.7
 scl enable python27 bash
+
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+
 ```
 
