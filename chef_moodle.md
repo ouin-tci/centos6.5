@@ -55,3 +55,33 @@ sudo yum install python27 # install Python 2.7
 scl enable python27 bash
 ```
 
+
+
+```
+sudo yum -y update
+sudo yum -y localinstall https://yum.postgresql.org/9.3/redhat/rhel-6.5-x86_64/pgdg-centos93-9.3-3.noarch.rpm
+sudo yum -y install postgresql93-server
+sudo service postgresql-9.3 initdb
+createuser -U postgres -sw moodle
+createdb -U postgres -O moodle -E utf8 -T template0 moodle
+echo "ALTER ROLE moodle ENCRYPTED PASSWORD 'moodle';" | psql -U postgres
+
+```
+
+```
+vi /var/lib/pgsql/9.3/data/pg_hba.conf
+以下内容を設定
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     trust
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+
+```
+
+```
+
+
+```
