@@ -62,10 +62,15 @@ sudo yum -y update
 sudo yum -y localinstall https://yum.postgresql.org/9.3/redhat/rhel-6.5-x86_64/pgdg-centos93-9.3-3.noarch.rpm
 sudo yum -y install postgresql93-server
 sudo service postgresql-9.3 initdb
+sudo service postgresql-9.3 restart
+
+sudo su
+su - postgres
 createuser -U postgres -sw moodle
 createdb -U postgres -O moodle -E utf8 -T template0 moodle
 echo "ALTER ROLE moodle ENCRYPTED PASSWORD 'moodle';" | psql -U postgres
-
+exit
+exit
 ```
 
 ```
@@ -82,6 +87,9 @@ host    all             all             ::1/128                 md5
 ```
 
 ```
-
+sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+sudo yum install php php-cli php-common php-gd php-mbstring php-mysql php-pdo -y
+sudo yum install php-pear php-devel postgresql93.x86_64 postgresql93-devel.x86_64 -y
+sudo yum install php-pgsql.x86_64 -y
 
 ```
