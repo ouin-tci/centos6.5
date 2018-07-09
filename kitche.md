@@ -363,8 +363,8 @@ createuser -P -s <ユーザー名> #postgres/postgresに設定する
 
 
 # PostgreSQLを外部(PgAdmin)からアクセスできるように設定する（オプション）を参照
-vi /usr/local/var/postgres/data/10/postgresql.conf 
-vi /usr/local/var/postgres/data/10/pg_hba.conf
+vi /var/lib/pgsql/10/data/pg_hba.conf
+vi /var/lib/pgsql/10/data/postgresql.conf 
 #再起動
 pg_ctl -D /usr/local/var/postgres/data/10 -l logfile restart
 
