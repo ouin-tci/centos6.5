@@ -316,6 +316,7 @@ $ phantomjs -v
 
 
 1. 日本語を使うように環境設定する
+sudo yum -y install fontconfig-devel
 sudo yum groupinstall "Japanese Support"
 
 sudo localedef -f UTF-8 -i ja_JP ja_JP.utf8
