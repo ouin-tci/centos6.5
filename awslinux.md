@@ -6,6 +6,9 @@ vagrant ssh
 swith to root user
 ```
 sudo su
+
+//resize disk if have to
+resize2fs -f /dev/sda1
 ```
 
 yum update
