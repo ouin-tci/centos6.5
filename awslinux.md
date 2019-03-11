@@ -6,9 +6,6 @@ vagrant ssh
 swith to root user
 ```
 sudo su
-
-//resize disk if have to
-resize2fs -f /dev/sda1
 ```
 
 yum update
@@ -62,6 +59,14 @@ sudo service postgresql96 restart
 //change password to 'postgres'
 sudo passwd postgres
 
+sudo su - postgres
+psql
+CREATE DATABASE "DBNAME";
+¥l
+¥d
+gzip -cd /path/to/dump.gz | psql -d "DBNAME"
+exit
+
 ```
 
 
@@ -79,13 +84,15 @@ source ~/.bash_profile
 
 rbenv -v
 
+sudo yum install -y openssl-devel readline-devel
+
 rbenv install 2.4.4
 rbenv global 2.4.4
 ruby -v
 
 gem install bundler
 gem install rails
-yum install sqlite-devel
+sudo yum install -y sqlite-devel
 
 ```
 
@@ -126,4 +133,5 @@ rails s -b 0.0.0.0
 cd path/to/mentough
 rails s -b 0.0.0.0 -p 3001
 
+http://127.0.0.1:3000
 ```
