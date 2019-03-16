@@ -154,4 +154,7 @@ sudo ln -s /opt/phantomjs/bin/phantomjs /usr/bin/phantomjs
 phantomjs /opt/phantomjs/examples/hello.js
 
 
+#Japanese Fonts
+sudo yum install -y ipa-gothic-fonts.noarch
+sudo yum install -y ipa-mincho-fonts.noarch
 ```
