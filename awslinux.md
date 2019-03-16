@@ -141,8 +141,11 @@ http://127.0.0.1:3000
 ```
 #PhantomJS
 
+cd /tmp
 sudo yum install -y fontconfig freetype freetype-devel fontconfig-devel libstdc++
-wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
+#wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
+wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+
 sudo mkdir -p /opt/phantomjs
 bzip2 -d phantomjs-1.9.8-linux-x86_64.tar.bz2
 sudo tar -xvf phantomjs-1.9.8-linux-x86_64.tar \
