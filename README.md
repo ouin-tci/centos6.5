@@ -368,3 +368,5 @@ Host vagrant-moodle
 # knifeでMoodle環境作成
 bundle exec knife solo prepare vagrant-moodle
 ```
+
+https://github.com/rshindo/spring-data-jdbc-demo
