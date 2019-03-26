@@ -370,3 +370,4 @@ bundle exec knife solo prepare vagrant-moodle
 ```
 
 https://github.com/rshindo/spring-data-jdbc-demo
+https://github.com/kazuki43zoo/spring-data-jdbc-demo
