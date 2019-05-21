@@ -105,7 +105,9 @@ sudo yum install -y sqlite-devel
 ```
 //
 sudo yum -y install postgresql96-devel
+sudo yum install -y devtoolset-7-gcc-c++ devtoolset-7-make devtoolset-7-build
 sudo yum -y install gcc72-c++.x86_64
+scl enable devtoolset-7 bash
 
 gem install pg -- --with-pg-config=/usr/bin/pg_config
 
