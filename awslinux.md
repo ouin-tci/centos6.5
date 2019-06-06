@@ -56,18 +56,24 @@ sudo -u postgres -i psql -c 'SELECT version();'
 # eidt postgresql conf file
 ```
 sudo vi /var/lib/pgsql96/data/postgresql.conf 
+
+#press a key
 listen_addresses = 'localhost'
 ↓
 listen_addresses = '*' 
 port = 5432
 
+# press ESC key
 :wq
 
 sudo vi /var/lib/pgsql96/data/pg_hba.conf 
 //modify
+#press a key
 # IPv4 local connections:
 host    all         all         127.0.0.1/32          trust
 host    all         all         0.0.0.0/0             trust
+
+# press ESC key
 :wq
 
 sudo service postgresql96 restart
@@ -90,7 +96,7 @@ exit
 ```
 git --version
 
-#if git hasnt installed yet
+#if git hasn't been installed yet
 sudo yum install -y git
 
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
