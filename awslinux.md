@@ -1,14 +1,18 @@
+# windows
+
 ```
+cmd
+cd path/to/vagrant/folder
 vagrant up
 vagrant ssh
 ```
 
-swith to root user
+# swith to root user
 ```
 sudo su
 ```
 
-yum update
+# yum update
 ```
 vi /etc/yum.conf
 
@@ -26,7 +30,7 @@ exit
 ```
 
 
-postgresql96 install
+# postgresql96 install
 ```
 sudo yum install -y postgresql96 postgresql96-server postgresql96-libs postgresql96-contrib
 
@@ -38,7 +42,7 @@ sudo chkconfig postgresql96 on
 sudo -u postgres -i psql -c 'SELECT version();'
 ```
 
-eidt postgresql conf file
+# eidt postgresql conf file
 ```
 sudo vi /var/lib/pgsql96/data/postgresql.conf 
 listen_addresses = 'localhost'
@@ -71,7 +75,7 @@ exit
 
 
 
-ruby install
+# ruby install
 ```
 git --version
 
@@ -143,7 +147,7 @@ http://127.0.0.1:3000
 ```
 
 
-
+# option
 ```
 #PhantomJS
 
