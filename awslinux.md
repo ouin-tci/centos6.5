@@ -22,6 +22,7 @@ vi /etc/yum.conf
 ↓
 releasever=latest
 
+# press ESC key
 :wq
 
 yum -y update
