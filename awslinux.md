@@ -1,5 +1,6 @@
 # windows
 
+### download file https://github.com/ouin-tci/centos6.5/blob/master/aws/Vagrantfile save to path/to/Vagrantfile/folder
 ```
 cmd
 cd path/to/Vagrantfile/folder
