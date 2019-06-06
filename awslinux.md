@@ -2,7 +2,7 @@
 
 ```
 cmd
-cd path/to/vagrant/folder
+cd path/to/Vagrantfile/folder
 vagrant up
 vagrant ssh
 ```
