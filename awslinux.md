@@ -83,15 +83,15 @@ sudo passwd postgres
 
 sudo su - postgres
 psql
-CREATE DATABASE "DBNAME";
+
+// change YOUR_DB_NAME to your db name
+CREATE DATABASE "YOUR_DB_NAME";
 ¥l
 ¥d
-gzip -cd /path/to/dump.gz | psql -d "DBNAME"
+gzip -cd /path/to/dump.gz | psql -d "YOUR_DB_NAME"
 exit
 
 ```
-
-
 
 # ruby install
 ```
