@@ -8,14 +8,10 @@ vagrant up
 vagrant ssh
 ```
 
-# swith to root user
-```
-sudo su
-```
 
 # yum update
 ```
-vi /etc/yum.conf
+sudo vi /etc/yum.conf
 
 
 //press a key switch insert mode, then goto 19th line
@@ -26,19 +22,18 @@ releasever=latest
 # press ESC key
 :wq
 
-yum -y update
-exit
+sudo yum -y update
+
 
 ```
 
 # nodejs install
 
 ```
-
-sudo yum install -y gcc-c++ make
-curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-sudo yum install -y yarn
-
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+source .bashrc
+nvm install --lts
+nvm use --lts
 node -v
 ```
 
