@@ -132,7 +132,10 @@ sudo yum -y install gcc72-c++.x86_64
 scl enable devtoolset-7 bash
 
 gem install pg -- --with-pg-config=/usr/bin/pg_config
+```
 
+# option
+```
 //
 cd path/to/mentough_common/
 cp config/settings.local.yml.sample config/settings.local.yml
