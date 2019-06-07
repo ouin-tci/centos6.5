@@ -112,7 +112,7 @@ rbenv global 2.4.4
 ruby -v
 
 gem install bundler
-gem install rails
+gem install rails -v '5.2.3'
 sudo yum install -y sqlite-devel
 
 ```
